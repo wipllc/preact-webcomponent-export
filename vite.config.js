@@ -8,7 +8,7 @@ export default defineConfig({
 
   build: {
     lib: {
-      entry: resolve(__dirname, "src/web-component.jsx"),
+      entry: resolve(__dirname, "src/main.jsx"),
       name: "MyComponent",
       // the proper extensions will be added
       fileName: "my-component",
