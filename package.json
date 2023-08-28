@@ -20,9 +20,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "array-shuffle": "^3.0.0",
+    "framer-motion": "^10.16.1",
     "goober": "^2.1.10",
-    "preact": "^10.9.0",
-    "preact-custom-element": "^4.2.1"
+    "lodash.invert": "^4.3.0",
+    "preact": "^10.17.1",
+    "preact-custom-element": "^4.2.1",
+    "react-icons": "^4.10.1",
+    "react-responsive": "^9.0.2"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.3.0",

@@ -1,0 +1,114 @@
+[
+  {
+    "title": "Everyone has different goals.",
+    "description": "Please click then drag the phrases below in order of ‘most important’ to ‘least important’",
+    "biggerRuler": "Most",
+    "smallerRuler": "Least",
+    "answers": [
+      {
+        "index": 0,
+        "title": "Being loyal",
+        "selected": false
+      },
+      {
+        "index": 1,
+        "title": "Being a leader",
+        "selected": false
+      },
+      {
+        "index": 2,
+        "title": "Being unique",
+        "selected": false
+      },
+      {
+        "index": 3,
+        "title": "Being wise",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "title": "Everyone has different goals.",
+    "description": "Please click then drag the phrases below in order of ‘most important’ to ‘least important’",
+    "biggerRuler": "Most",
+    "smallerRuler": "Least",
+    "answers": [
+      {
+        "index": 0,
+        "title": "Politeness",
+        "selected": false
+      },
+      {
+        "index": 1,
+        "title": "Reputation",
+        "selected": false
+      },
+      {
+        "index": 2,
+        "title": "Fun",
+        "selected": false
+      },
+      {
+        "index": 3,
+        "title": "Spirituality",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "title": "Everyone has different goals.",
+    "description": "Please click then drag the phrases below in order of ‘most important’ to ‘least important’",
+    "biggerRuler": "Most",
+    "smallerRuler": "Least",
+    "answers": [
+      {
+        "index": 0,
+        "title": "Following the rules",
+        "selected": false
+      },
+      {
+        "index": 1,
+        "title": "Achieving success",
+        "selected": false
+      },
+      {
+        "index": 2,
+        "title": "Having adventures",
+        "selected": false
+      },
+      {
+        "index": 3,
+        "title": "Helping others",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "title": "Everyone has different priorities.",
+    "description": "Please click then drag the phrases below in order of ‘most satisfying to ‘least satisfying’",
+    "biggerRuler": "Most",
+    "smallerRuler": "Least",
+    "answers": [
+      {
+        "index": 0,
+        "title": "Honor the traditions of my family or my community",
+        "selected": false
+      },
+      {
+        "index": 1,
+        "title": "Earn enough for me to buy nice things for me and my family",
+        "selected": false
+      },
+      {
+        "index": 2,
+        "title": "Make the world a better place for everyone to live",
+        "selected": false
+      },
+      {
+        "index": 3,
+        "title": "Give me new experiences and perspectives",
+        "selected": false
+      }
+    ]
+  }
+]

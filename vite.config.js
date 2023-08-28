@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
 import preact from "@preact/preset-vite";
+import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,5 +13,8 @@ export default defineConfig({
       // the proper extensions will be added
       fileName: "my-component",
     },
+    alias: {
+      react: "preact/compat"
+    }
   },
 });
