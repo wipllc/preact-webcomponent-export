@@ -17,11 +17,9 @@ import { getAudienceSlug } from "./constants";
 import { getQuizResult } from "./utils";
 import originalQuestions from "./data.json";
 import { useMediaQuery } from "react-responsive";
-// import { useRouter } from "next/router";
 import { useState } from "preact/hooks";
 
 export default function Quiz(props) {
-  // const router = useRouter();
 
   const [questions, setQuestions] = useState(
     JSON.parse(JSON.stringify(originalQuestions))
@@ -76,6 +74,18 @@ export default function Quiz(props) {
     const result = getQuizResult(values);
 
     document.body.style.overflow = `unset`;
+    if (history) {
+      const audience = getAudienceSlug(result);
+      if (audience === AUDIENCE_TYPES.PEOPLE_POWER) {
+        history.pushState({}, "", props.ppURL);
+      } else if(audience === AUDIENCE_TYPES.IF_YOU_SAY_SO) {
+        history.pushState({}, "", props.iyssURL);
+      } else if(audience === AUDIENCE_TYPES.TOUGH_COOKIES) {
+        history.pushState({}, "", props.tcURL);
+      } else if(audience === AUDIENCE_TYPES.DONT_TREAD_ON_ME) {
+        history.pushState({}, "", props.dtomURL);
+      }
+    }
     // router.push(`/audiences/${getAudienceSlug(result)}?quiz`);
   };
 

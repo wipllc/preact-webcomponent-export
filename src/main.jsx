@@ -11,7 +11,14 @@ setup(h);
 // Register all your components and props here.
 register(HelloWorld, "hello-world", ["name"], { shadow: false });
 register(KitchenSink, "kitchen-sink", ["name"], { shadow: false });
-register(Quiz, "audience-quiz", ["name"], { shadow: false });
+register(Quiz, "audience-quiz", ["ppURL","iyssURL","tcURL","dtomURL"], { shadow: false });
 
 // Replace with your web-component tag to preview with 'yarn dev'
-export const Preview = () => <audience-quiz />;
+export const Preview = () => (
+    <audience-quiz 
+        ppURL="#pp"
+        iyssURL="#iyss"
+        tcURL="#tc"
+        dtomURL="#dtom"
+    />
+); 

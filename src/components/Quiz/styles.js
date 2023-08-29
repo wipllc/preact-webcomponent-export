@@ -2,19 +2,19 @@ import { BREAKPOINT } from './style-utils'
 import { COLORS } from './style-utils'
 import {styled} from "goober";
 
-export const QuizContainer = styled('section')`
+export const QuizContainer = styled("section")`
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
   z-index: 999;
   inset: 0;
-  font-family: var(--font-harmony);
-  
+  font-family: inherit;
+  background: ${COLORS.WHITE};
 
   & > div {
-    width: 588px;
-    height: 466px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -37,7 +37,7 @@ export const QuizContainer = styled('section')`
       overflow-y: scroll;
     }
   }
-`
+`;
 
 export const Headline = styled('div')`
   width: 100%;
@@ -146,11 +146,12 @@ export const Assessment = styled('div')`
   }
 `
 
-export const Body = styled('div')`
+export const Body = styled("div")`
   height: 100%;
   position: relative;
 
   button {
+    font-family: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -311,7 +312,7 @@ export const Body = styled('div')`
   }
 `;
 
-export const NextButton = styled('button')`
+export const NextButton = styled("button")`
   border: 0;
   width: 100%;
   height: 146px;
@@ -332,4 +333,4 @@ export const NextButton = styled('button')`
     background: ${COLORS.WHITE};
     border-top: 1px solid #e1e1e1;
   }
-`
+`;
