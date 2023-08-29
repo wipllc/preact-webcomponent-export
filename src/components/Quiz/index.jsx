@@ -8,7 +8,6 @@ import {
   Title,
 } from "./styles";
 import { IoMdArrowBack, IoMdArrowForward, IoMdClose } from "react-icons/io";
-import { Reorder, motion } from "framer-motion";
 
 import { MdOutlineDragIndicator } from "react-icons/md";
 import Spinner from "./Spinner";
@@ -163,32 +162,32 @@ export default function Quiz(props) {
             </ul>
 
             {isTabletOrMobile ? (
-              <Reorder.Group
+              <div
                 axis="x"
                 values={chosenAnswers}
                 onReorder={setChosenAnswers}
               >
                 {chosenAnswers.map((answer) => (
-                  <Reorder.Item key={answer.index} value={answer}>
+                  <div key={answer.index} value={answer}>
                     <button type="button">{answer.title}</button>
-                  </Reorder.Item>
+                  </div>
                 ))}
-              </Reorder.Group>
+              </div>
             ) : (
-              <Reorder.Group
+              <div
                 axis="y"
                 values={chosenAnswers}
                 onReorder={setChosenAnswers}
               >
                 {chosenAnswers.map((answer) => (
-                  <Reorder.Item key={answer.index} value={answer}>
+                  <div key={answer.index} value={answer}>
                     <button type="button">
                       <MdOutlineDragIndicator size={16} color="#FFFFFF40" />
                       {answer.title}
                     </button>
-                  </Reorder.Item>
+                  </div>
                 ))}
-              </Reorder.Group>
+              </div>
             )}
 
             {chosenAnswers.length === availableAnswers.length ? (
@@ -214,7 +213,7 @@ export default function Quiz(props) {
             ) : (
               <ul>
                 {availableAnswers.map((answer, index) => (
-                  <motion.li
+                  <li
                     key={index++}
                     initial={{
                       opacity: 0,
@@ -234,7 +233,7 @@ export default function Quiz(props) {
                     >
                       {answer.selected ? ` ` : answer.title}
                     </button>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
             )}

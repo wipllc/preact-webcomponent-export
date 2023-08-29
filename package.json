@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "array-shuffle": "^3.0.0",
-    "framer-motion": "^10.16.1",
     "goober": "^2.1.10",
     "lodash.invert": "^4.3.0",
     "preact": "^10.17.1",
