@@ -1,3 +1,5 @@
+import "process";
+
 import { HelloWorld } from "./components/HelloWorld";
 import { KitchenSink } from "./components/KitchenSink";
 import Quiz from "./components/Quiz";

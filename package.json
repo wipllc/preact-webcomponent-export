@@ -26,6 +26,7 @@
     "lodash.invert": "^4.3.0",
     "preact": "^10.17.1",
     "preact-custom-element": "^4.2.1",
+    "process": "^0.11.10",
     "react-icons": "^4.10.1",
     "react-responsive": "^9.0.2"
   },
