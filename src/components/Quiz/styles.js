@@ -6,7 +6,6 @@ export const QuizContainer = styled("section")`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
   z-index: 999;
   inset: 0;
   font-family: inherit;
