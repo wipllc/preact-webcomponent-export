@@ -1,15 +1,21 @@
 import { BREAKPOINT } from './style-utils'
 import { COLORS } from './style-utils'
-import {styled} from "goober";
+import { styled } from "goober";
 
 export const QuizContainer = styled("section")`
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 999;
-  inset: 0;
+ 
+  width: 100%;
+  height:100%;
+   
   font-family: inherit;
+
+  padding:10px;
+  box-sizing: border-box;
+
   background: ${COLORS.WHITE};
 
   & > div {
@@ -20,10 +26,10 @@ export const QuizContainer = styled("section")`
     position: relative;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0px 2px 20px 0px #0000001a;
-    padding: 22px 18px 18px 18px;
+    
+    
     background: var(--harmony-white);
-    border-radius: 25px;
+   
   }
 
   @media ${BREAKPOINT.XS} {
@@ -39,70 +45,16 @@ export const QuizContainer = styled("section")`
   }
 `;
 
-export const Headline = styled('div')`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
+export const PartTracker = styled("span")`
+  border: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  `;
 
-  & > button {
-    border: 0;
-    height: 26px;
-    display: flex;
-    align-items: center;
-    border-radius: 15px;
-    font-size: 7.5px;
-    line-height: 16px;
-    color: #262626;
-    padding: 6px 10px;
-    background: ${COLORS.LIGHTEST_GRAY};
-
-    .closeIcon {
-      display: none;
-    }
-
-    span {
-      margin-right: 4px;
-    }
-  }
-
-  & button:nth-child(2) {
-    margin-right: 8px;
-  }
-
-  @media ${BREAKPOINT.XS} {
-    top: 17px;
-    right: 14px;
-    position: fixed;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    margin-bottom: 21px;
-
-    & > button {
-      height: 45px;
-      color: ${COLORS.DARK_BLACK};
-      background: ${COLORS.WHITE};
-
-      .arrowIcon {
-        display: none;
-      }
-
-      .closeIcon {
-        display: flex;
-        margin-left: 6px;
-      }
-
-      span {
-        display: none;
-      }
-    }
-  }
-`
-
-export const Title = styled('h4')`
+export const Title = styled('h2')`
   color: #262626;
-  font-size: 20px;
+
   line-height: 36px;
   margin-bottom: 12px;
   text-align: center;
@@ -116,9 +68,7 @@ export const Title = styled('h4')`
 
 export const Description = styled('p')`
   text-align: center;
-  line-height: 15px !important;
-  font-size: 7.5px !important;
-  margin: 0 0 24px 0 !important;
+
   color: ${COLORS.DARK_BLACK};
   width: 100%;
 
@@ -133,7 +83,7 @@ export const Assessment = styled('div')`
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-  font-size: 7.5px;
+
   line-height: 15px;
   color: var(--harmony-black);
 
@@ -159,6 +109,7 @@ export const Body = styled("div")`
 
   ul {
     gap: 12px;
+    padding:0;
 
     height: 100px;
     display: grid;
@@ -173,7 +124,7 @@ export const Body = styled("div")`
       height: 100px;
       color: #00000054;
       line-height: 22px;
-      font-size: 7.5px;
+  
       border-radius: 15px;
       display: flex;
       justify-content: flex-start;
@@ -316,7 +267,7 @@ export const NextButton = styled("button")`
   border: 0;
   width: 100%;
   height: 146px;
-  font-size: 7.5px;
+
   line-height: 15px;
   border-radius: 15px;
   color: ${COLORS.DARK_BLACK};

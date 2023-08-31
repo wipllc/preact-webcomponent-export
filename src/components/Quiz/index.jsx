@@ -2,7 +2,7 @@ import {
   Assessment,
   Body,
   Description,
-  Headline,
+  PartTracker,
   NextButton,
   QuizContainer,
   Title,
@@ -20,7 +20,6 @@ import { useMediaQuery } from "react-responsive";
 import { useState } from "preact/hooks";
 
 export default function Quiz(props) {
-
   const [questions, setQuestions] = useState(
     JSON.parse(JSON.stringify(originalQuestions))
   );
@@ -78,11 +77,11 @@ export default function Quiz(props) {
       const audience = getAudienceSlug(result);
       if (audience === AUDIENCE_TYPES.PEOPLE_POWER) {
         history.pushState({}, "", props.ppURL);
-      } else if(audience === AUDIENCE_TYPES.IF_YOU_SAY_SO) {
+      } else if (audience === AUDIENCE_TYPES.IF_YOU_SAY_SO) {
         history.pushState({}, "", props.iyssURL);
-      } else if(audience === AUDIENCE_TYPES.TOUGH_COOKIES) {
+      } else if (audience === AUDIENCE_TYPES.TOUGH_COOKIES) {
         history.pushState({}, "", props.tcURL);
-      } else if(audience === AUDIENCE_TYPES.DONT_TREAD_ON_ME) {
+      } else if (audience === AUDIENCE_TYPES.DONT_TREAD_ON_ME) {
         history.pushState({}, "", props.dtomURL);
       }
     }
@@ -99,25 +98,12 @@ export default function Quiz(props) {
   return (
     <>
       <QuizContainer>
+        <PartTracker>
+          <span>Part</span> {currentQuestion + 1} / {questions.length}
+        </PartTracker>
+
         <div>
-          <Headline>
-            <button
-              type="button"
-              onClick={() => {
-                props.onExitClick();
-              }}
-            >
-              <IoMdArrowBack size={16} className="arrowIcon" /> Exit Quiz
-              <IoMdClose size={16} className="closeIcon" />
-            </button>
-
-            <button type="button">
-              <span>Part</span> {currentQuestion + 1} / {questions.length}
-            </button>
-          </Headline>
-
           <Title>{questions[currentQuestion].title}</Title>
-
           <Description>{questions[currentQuestion].description}</Description>
 
           <Assessment>
