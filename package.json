@@ -6,12 +6,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/my-component.umd.cjs",
-  "module": "./dist/my-component.js",
+  "main": "./dist/audience-quiz.umd.cjs",
+  "module": "./dist/audience-quiz.js",
   "exports": {
     ".": {
-      "import": "./dist/my-component.js",
-      "require": "./dist/my-component.umd.cjs"
+      "import": "./dist/audience-quiz.js",
+      "require": "./dist/audience-quiz.umd.cjs"
     }
   },
   "scripts": {
@@ -20,9 +20,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "array-shuffle": "^3.0.0",
+    "framer-motion": "^10.16.1",
     "goober": "^2.1.10",
-    "preact": "^10.9.0",
-    "preact-custom-element": "^4.2.1"
+    "lodash.invert": "^4.3.0",
+    "preact": "^10.17.1",
+    "preact-custom-element": "^4.2.1",
+    "process": "^0.11.10",
+    "react-icons": "^4.10.1",
+    "react-responsive": "^9.0.2"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.3.0",
